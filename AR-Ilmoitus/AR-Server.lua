@@ -2,7 +2,7 @@ ESX = nil TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 function CheckJob(Jobi)
     for k, v in pairs(AR.Settings.WhitelistedJobs) do
-        if v == Jobi then
+        if v.JobName == Jobi then
             return true, v.ChatPrefix
         end
     end
